@@ -1,7 +1,7 @@
 ## 3D Maze with Modern OpenGL
 
 ### What does it do?
-3D maze game using modern OpenGL. Interactive scenario, with navigation in first person, following the format of a standard game. The maze can have more than one floor and has portals (elevators) for transition between floors. The objective of the game is to collect all items and return to the starting position.
+3D maze game using modern OpenGL. The game has an interactive scenario, with navigation in first person, following the format of a standard game. The maze can have more than one floor and has portals (elevators) for transition between floors. The objective of the game is to collect all items and return to the starting position.
 
 ### The Game
 #### 
