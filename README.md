@@ -1,11 +1,12 @@
-## Distributed Systems Architecture: Client-Balancer-Server
+## 3D Maze with Modern OpenGL
 
 ### What does it do?
-The program uses multiple **clients** that request - in this case a simple prime number verification - to **servers**. Every request is controlled by the **balancer** which is composed of a request handler, a requests queue, and a dispatcher that sends the requests to servers and handles the synchronization of the database (each server file). To allow multiple clients to make requests, sockets programming, multithreading and concurrent techniques were used.
+3D maze game using modern OpenGL. Interactive scenario, with navigation in first person, following the format of a standard game. The maze can have more than one floor and has portals (elevators) for transition between floors. The objective of the game is to collect all items and return to the starting position.
 
-### Architecture
+### The Game
+#### 
 <p align="center" width="100%">
-    <img width="90%" src="https://raw.githubusercontent.com/alexandreclem/loadBalancer/master/images/img.png">    
+    <img width="90%" src="https://raw.githubusercontent.com/alexandreclem/Maze/master/images/img.png">    
 </p>
 
 ### Description
