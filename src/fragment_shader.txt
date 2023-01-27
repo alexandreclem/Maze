@@ -1,0 +1,20 @@
+#version 330 core
+// INPUT
+// in vec3 Color;
+in vec2 Texture;
+
+// OUTPUT
+out vec4 Fragment; 
+
+// UNIFORMS
+uniform sampler2D TextureSampler2D_1;
+uniform sampler2D TextureSampler2D_2;
+
+void main()
+{
+    // Fragment = vec4(Color, 1.0);                                         // Only using colors
+    // Fragment = texture(TextureSampler2D_2, Texture);                     // Only using textures
+    // Fragment = texture(TextureSampler2D, Texture) * vec4(Color, 1.0);    // Using both    
+    Fragment = mix(texture(TextureSampler2D_1, Texture), texture(TextureSampler2D_2, Texture), 0.55); // Mixing 2 Textures with 0.2 ratio    
+    // Fragment = mix(texture(TextureSampler2D_1, Texture), texture(TextureSampler2D_2, Texture), 0.2) * vec4(Color, 1.0); // Mixing 2 Textures with 0.2 ratio and using colors
+}
