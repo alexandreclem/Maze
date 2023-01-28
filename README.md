@@ -65,10 +65,11 @@
         - Windows
             - Use **https://opengl-extensions-viewer.en.softonic.com/**
         - Linux
-            ```bash
-                $ sudo apt-get install mesa-utils
-                $ glxinfo | grep "OpenGL version"
-            ```
+            - Run:
+                ```bash
+                    $ sudo apt-get install mesa-utils
+                    $ glxinfo | grep "OpenGL version"
+                ```
     - Install GLAD here **https://glad.dav1d.de/**
         - Settings:
             - Language: C/C++
