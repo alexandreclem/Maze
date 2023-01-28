@@ -57,37 +57,74 @@
             $ sudo apt-get install libglfw3
             $ sudo apt-get install libglfw3-dev
         ```
-- GLAD
-    - Windows & Linux
-        - Find out your OpenGL version:
-            - Windows
-                - Use **https://opengl-extensions-viewer.en.softonic.com/**
-            - Linux
-                ```bash
-                    $ sudo apt-get install mesa-utils
-                    $ glxinfo | grep "OpenGL version"
-                ```
-        - Install GLAD here **https://glad.dav1d.de/**
-            - Settings:
-                - Language: C/C++
-                - Specification: OpenGL
-                - API gl: your_opengl_version
-                - Profile: Core
-        - Unzip and after that:
-            - Get the **glad.h** and **khrplatform.h** files from the **include** directory
-            - Get the **glad.c** file from the **src** directory
-            - Paste the **glad.h** and **khrplatform.h** and **glad.c** in the project **src/dependencies/GLAD** directory
-        - Build the Library
-            - Within the **src/dependencies/GLAD** run:
-                ```bash
-                    $ gcc -c glad.c
-                    $ ar rcs libglad.a glad.o
-                ```
+        > **NOTE**
+            >            
+            > You need to modify the header #include "dependencies/GLFW/glfw3.h" to #include \<GLFW/glfw3.h> in the **src/maze.cpp** file.
+- GLAD    
+    - Find out your OpenGL version:
+        - Windows
+            - Use **https://opengl-extensions-viewer.en.softonic.com/**
+        - Linux
+            ```bash
+                $ sudo apt-get install mesa-utils
+                $ glxinfo | grep "OpenGL version"
+            ```
+    - Install GLAD here **https://glad.dav1d.de/**
+        - Settings:
+            - Language: C/C++
+            - Specification: OpenGL
+            - API gl: your_opengl_version
+            - Profile: Core
+    - Unzip and after that:
+        - Get the **glad.h** and **khrplatform.h** files from the **include** directory
+        - Get the **glad.c** file from the **src** directory
+        - Paste the **glad.h** and **khrplatform.h** and **glad.c** in the project **src/dependencies/GLAD** directory            
+        > **NOTE**
+        >            
+        > You need to modify the **glad.c** header from #include \<glad/glad.h> to #include "glad.h".
+    - Build the Library
+        - Within the **src/dependencies/GLAD**, run:
+            ```bash
+                $ gcc -c glad.c
+                $ ar rcs libglad.a glad.o
+            ```
 
-        
+- GLM
+    - The library is already available at the **src/dependencies/GLM** directory
+    - However, if you want, can be found at **https://glm.g-truc.net/0.9.8/index.html** in the downloads section
 
-gcc -c glad.c
-ar rcs libglad.a glad.o
+- STB
+    - Download the stb.h from here **https://github.com/nothings/stb/blob/master/stb_image.h**
+    - After that, create a stb.cpp file with this code:
+        ```C++
+            #define STB_IMAGE_IMPLEMENTATION
+            #include "stb_image.h"        
+        ```
+    - Paste the **stb.h** and **stb.cpp** files in the **src/dependencies/STB** directory
+    - Build the Library
+        - Within the **src/dependencies/STB** directory, run:
+            ```bash
+                $ g++ -c stb.cpp
+                $ ar rcs libstb.a stb.o
+            ```
+    
+#### Execution
+
+- Within the **src** directory, run:
+   - Windows
+        ```bash
+            g++ maze.cpp -Idependencies/GLFW -Idependencies/GLAD -Idependencies/STB -Ldependencies/GLFW -Ldependencies/GLAD -Ldependencies\STB .\dependencies\GLAD\libglad.a .\dependencies\GLFW\libglfw3.a .\dependencies\STB\libstb.a -lopengl32 -lglu32 -lgdi32 -o maze
+        ```
+
+    - Linux
+        ```bash
+           
+        ```
+
+    
+
+    
+    
 
 
 
