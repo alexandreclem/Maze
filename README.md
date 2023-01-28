@@ -20,7 +20,13 @@
     - 3 Elevator to go down
     - 4: Collectable
 
-#### Three Floor Maze Example
+#### Example of a Three Floor Maze
+#####Architecture
 <p align="center" width="100%">
     <img width="90%" src="https://raw.githubusercontent.com/alexandreclem/Maze/master/images/maze_ex.png">    
+</p>
+
+##### Input Data (3 Floors 8x8)
+<p align="center" width="100%">
+    <img width="90%" src="https://raw.githubusercontent.com/alexandreclem/Maze/master/images/input_data.png">    
 </p>
