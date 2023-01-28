@@ -58,8 +58,8 @@
                 $ sudo apt-get install libglfw3-dev
             ```
         > **NOTE**
-            >            
-            > You need to modify the header #include "dependencies/GLFW/glfw3.h" to #include \<GLFW/glfw3.h> in the **src/maze.cpp** file.
+        >                    
+        > You need to modify the header #include "dependencies/GLFW/glfw3.h" to #include \<GLFW/glfw3.h> in the **src/maze.cpp** file.
 - GLAD    
     - Find out your OpenGL version:
         - Windows
