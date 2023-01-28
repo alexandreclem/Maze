@@ -31,13 +31,13 @@
     <img width="25%" src="https://raw.githubusercontent.com/alexandreclem/Maze/master/images/input_data.png">    
 </p>
 
-#### How to Run?
+### How to Run?
 
-**Pre-Requesites**
+#### Pre-Requesites
 - GCC Compiler
 - Libraries: OpenGL | GLFW | GLAD | GLM | STB
 
-**Libraries Installation**
+#### Libraries Installation
 - OpenGL
     - Windows
         - Generally can be found at **system/win32/lopengl32**
@@ -109,7 +109,7 @@
             $ ar rcs libstb.a stb.o
             ```
     
-**Execution**
+#### Execution
 
 - Within the **src** directory, run:
    - Windows
