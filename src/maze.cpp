@@ -6,15 +6,15 @@
 #include <utility>
 #include <random>
 
-#include "GLAD/glad.h"
-#include "GLFW/glfw3.h"
-#include "GLM/glm.hpp"
-#include "GLM/gtc/matrix_transform.hpp"
-#include "GLM/gtc/type_ptr.hpp"
+#include "dependencies/GLAD/glad.h"
+#include "dependencies/GLFW/glfw3.h"
+#include "dependencies/GLM/glm.hpp"
+#include "dependencies/GLM/gtc/matrix_transform.hpp"
+#include "dependencies/GLM/gtc/type_ptr.hpp"
 
-#include "shaders.h"
-#include "read_obj.h"
-#include "stb_image.h"
+#include "dependencies/STB/stb_image.h"
+#include "dependencies/UTILS/shaders.h"
+#include "dependencies/UTILS/read_obj.h"
 
 
 // Settings //
@@ -129,7 +129,7 @@ int main() {
     glfwSetScrollCallback(window, scroll_callback);    
 
     // Shaders initialization //
-    Shader shader("vertex_shader.txt", "fragment_shader.txt"); // you can name your shader files however you like
+    Shader shader("./shaders_code/vertex_shader.txt", "./shaders_code/fragment_shader.txt"); // you can name your shader files however you like
     shader.use();
 
     // Initial OpenGL state //
@@ -202,7 +202,7 @@ int main() {
     
     // Sphere
     BlenderObject sphere;	
- 	sphere.read_file("sphere.obj");    
+ 	sphere.read_file("./objects/sphere.obj");    
 	std::vector<float> sphere_data = sphere.vertices_data(sphere.get_vertices(), sphere.get_textures(), sphere.get_normals(), sphere.get_faces());   
 
 	float *sphere_vertices = &sphere_data[0];
@@ -210,7 +210,7 @@ int main() {
 
     // Elevator
     BlenderObject elevator;	
- 	elevator.read_file("elevator.obj");    
+ 	elevator.read_file("./objects/elevator.obj");    
 	std::vector<float> elevator_data = elevator.vertices_data(elevator.get_vertices(), elevator.get_textures(), elevator.get_normals(), elevator.get_faces());   
 	
     float *elevator_vertices = &elevator_data[0];
@@ -661,7 +661,7 @@ void load_textures() {
     // Load image, create texture and generate mipmaps
     int width, height, nrChannels;
     stbi_set_flip_vertically_on_load(true); // tell stb_image.h to flip loaded texture's on the y-axis.
-    unsigned char* image_bytes = stbi_load("wall.jpg", &width, &height, &nrChannels, 0);
+    unsigned char* image_bytes = stbi_load("./textures/wall.jpg", &width, &height, &nrChannels, 0);
     if (image_bytes) {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image_bytes);
         glGenerateMipmap(GL_TEXTURE_2D);
@@ -682,7 +682,7 @@ void load_textures() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
     // Load image, create texture and generate mipmaps
-    image_bytes = stbi_load("emoji.png", &width, &height, &nrChannels, 0);
+    image_bytes = stbi_load("./textures/emoji.png", &width, &height, &nrChannels, 0);
     if (image_bytes) {
         // Note that the awesomeface.png has transparency and thus an alpha channel, so make sure to tell OpenGL the data type is of GL_RGBA
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image_bytes);
@@ -704,7 +704,7 @@ void load_textures() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
     // Load image, create texture and generate mipmaps
-    image_bytes = stbi_load("cash.jpg", &width, &height, &nrChannels, 0);
+    image_bytes = stbi_load("./textures/cash.jpg", &width, &height, &nrChannels, 0);
     if (image_bytes) {        
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image_bytes);
         glGenerateMipmap(GL_TEXTURE_2D);
@@ -725,7 +725,7 @@ void load_textures() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
     // Load image, create texture and generate mipmaps
-    image_bytes = stbi_load("sky.jpg", &width, &height, &nrChannels, 0);
+    image_bytes = stbi_load("./textures/sky.jpg", &width, &height, &nrChannels, 0);
     if (image_bytes) {        
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image_bytes);
         glGenerateMipmap(GL_TEXTURE_2D);
@@ -746,7 +746,7 @@ void load_textures() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
     // Load image, create texture and generate mipmaps
-    image_bytes = stbi_load("fire.jpg", &width, &height, &nrChannels, 0);
+    image_bytes = stbi_load("./textures/fire.jpg", &width, &height, &nrChannels, 0);
     if (image_bytes) {        
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image_bytes);
         glGenerateMipmap(GL_TEXTURE_2D);

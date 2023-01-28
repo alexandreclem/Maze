@@ -30,3 +30,13 @@
 <p align="center" width="100%">
     <img width="30%" src="https://raw.githubusercontent.com/alexandreclem/Maze/master/images/input_data.png">    
 </p>
+
+#### How to Run?
+
+**Pre-Requesites**
+- GCC Compiler
+- Libraries: OpenGL | GLFW | GLAD | GLM | STB
+
+**Libraries Installation**
+- OpenGL
+    
