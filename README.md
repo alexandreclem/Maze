@@ -26,7 +26,7 @@
     <img width="90%" src="https://raw.githubusercontent.com/alexandreclem/Maze/master/images/maze_ex.png">    
 </p>
 
-##### Input Data (3 Floors 8x8)
+##### Input Data (3 Floors 8x8) - Each square: One Floor
 <p align="center" width="100%">
-    <img width="50%" src="https://raw.githubusercontent.com/alexandreclem/Maze/master/images/input_data.png">    
+    <img width="30%" src="https://raw.githubusercontent.com/alexandreclem/Maze/master/images/input_data.png">    
 </p>
