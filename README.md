@@ -39,4 +39,57 @@
 
 **Libraries Installation**
 - OpenGL
-    
+    - Windows
+        - Generally can be found at **system/win32/lopengl32**
+    - Linux
+        - Already installed
+
+- GLFW
+    - Windows         
+        - Install the 64 or 32bits binaries from: **https://www.glfw.org/download.html**
+        - Unzip and after that:
+            - Get the **glfw3.h** file from **include/GLFW/glfw3** directory
+            - Get the **libglfw3.a** file from **lib-mingw-w64** directory
+        - Paste the **glfw3.h** and **libglfw3.a** in the project **src/dependencies/GLFW** directory
+    - Linux
+        - Run the commands:
+        ```bash
+            $ sudo apt-get install libglfw3
+            $ sudo apt-get install libglfw3-dev
+        ```
+- GLAD
+    - Windows & Linux
+        - Find out your OpenGL version:
+            - Windows
+                - Use **https://opengl-extensions-viewer.en.softonic.com/**
+            - Linux
+                ```bash
+                    $ sudo apt-get install mesa-utils
+                    $ glxinfo | grep "OpenGL version"
+                ```
+        - Install GLAD here **https://glad.dav1d.de/**
+            - Settings:
+                - Language: C/C++
+                - Specification: OpenGL
+                - API gl: your_opengl_version
+                - Profile: Core
+        - Unzip and after that:
+            - Get the **glad.h** and **khrplatform.h** files from the **include** directory
+            - Get the **glad.c** file from the **src** directory
+            - Paste the **glad.h** and **khrplatform.h** and **glad.c** in the project **src/dependencies/GLAD** directory
+        - Build the Library
+            - Within the **src/dependencies/GLAD** run:
+                ```bash
+                    $ gcc -c glad.c
+                    $ ar rcs libglad.a glad.o
+                ```
+
+        
+
+gcc -c glad.c
+ar rcs libglad.a glad.o
+
+
+
+
+
