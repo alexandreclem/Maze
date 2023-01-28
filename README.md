@@ -54,8 +54,8 @@
     - Linux
         - Run the commands:
             ```bash
-                $ sudo apt-get install libglfw3
-                $ sudo apt-get install libglfw3-dev
+            $ sudo apt-get install libglfw3
+            $ sudo apt-get install libglfw3-dev
             ```
         > **NOTE**
         >                    
@@ -67,8 +67,8 @@
         - Linux
             - Run:
                 ```bash
-                    $ sudo apt-get install mesa-utils
-                    $ glxinfo | grep "OpenGL version"
+                $ sudo apt-get install mesa-utils
+                $ glxinfo | grep "OpenGL version"
                 ```
     - Install GLAD here **https://glad.dav1d.de/**
         - Settings:
@@ -86,8 +86,8 @@
     - Build the Library
         - Within the **src/dependencies/GLAD**, run:
             ```bash
-                $ gcc -c glad.c
-                $ ar rcs libglad.a glad.o
+            $ gcc -c glad.c
+            $ ar rcs libglad.a glad.o
             ```
 
 - GLM
@@ -98,24 +98,29 @@
     - Download the stb.h from here **https://github.com/nothings/stb/blob/master/stb_image.h**
     - After that, create a stb.cpp file with this code:
         ```C++
-            #define STB_IMAGE_IMPLEMENTATION
-            #include "stb_image.h"        
+        #define STB_IMAGE_IMPLEMENTATION
+        #include "stb_image.h"        
         ```
     - Paste the **stb.h** and **stb.cpp** files in the **src/dependencies/STB** directory
     - Build the Library
         - Within the **src/dependencies/STB** directory, run:
             ```bash
-                $ g++ -c stb.cpp
-                $ ar rcs libstb.a stb.o
+            $ g++ -c stb.cpp
+            $ ar rcs libstb.a stb.o
             ```
     
 #### Execution
 
 - Within the **src** directory, run:
    - Windows
-        ```bash
-            g++ maze.cpp -Idependencies/GLFW -Idependencies/GLAD -Idependencies/STB -Ldependencies/GLFW -Ldependencies/GLAD -Ldependencies\STB .\dependencies\GLAD\libglad.a .\dependencies\GLFW\libglfw3.a .\dependencies\STB\libstb.a -lopengl32 -lglu32 -lgdi32 -o maze
-        ```
+        - Compile
+            ```bash
+            $ g++ maze.cpp -Idependencies/GLFW -Idependencies/GLAD -Idependencies/STB -Ldependencies/GLFW -Ldependencies/GLAD -Ldependencies\STB .\dependencies\GLAD\libglad.a .\dependencies\GLFW\libglfw3.a .\dependencies\STB\libstb.a -lopengl32 -lglu32 -lgdi32 -o maze            
+            ```
+        - Run
+            ```bash
+            $ maze.exe
+            ```
 
     - Linux
         ```bash
