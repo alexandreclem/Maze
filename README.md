@@ -53,10 +53,10 @@
         - Paste the **glfw3.h** and **libglfw3.a** in the project **src/dependencies/GLFW** directory
     - Linux
         - Run the commands:
-        ```bash
-            $ sudo apt-get install libglfw3
-            $ sudo apt-get install libglfw3-dev
-        ```
+            ```bash
+                $ sudo apt-get install libglfw3
+                $ sudo apt-get install libglfw3-dev
+            ```
         > **NOTE**
             >            
             > You need to modify the header #include "dependencies/GLFW/glfw3.h" to #include \<GLFW/glfw3.h> in the **src/maze.cpp** file.
