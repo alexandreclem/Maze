@@ -31,12 +31,20 @@
     <img width="25%" src="https://raw.githubusercontent.com/alexandreclem/Maze/master/images/input_data.png">    
 </p>
 
+> **NOTE**
+>
+> You can play around with the scenario editing the input.txt file inside the **src** directory. Be careful when assigning the elevators because If you're in the first floor and creates a go down elevator you'll get an error, likewise if you create a go up elevator in the last floor.
+
 ### How to Run?
 
 #### Pre-Requesites
 - GCC Compiler
 - Libraries: OpenGL | GLFW | GLAD | GLM | STB
 
+#### Clone the Repository
+```bash
+$ git clone https://github.com/alexandreclem/Maze.git
+```
 #### Libraries Installation
 - OpenGL
     - Windows
@@ -48,7 +56,7 @@
     - Windows         
         - Install the 64 or 32bits binaries from: **https://www.glfw.org/download.html**
         - Unzip and after that:
-            - Get the **glfw3.h** file from **include/GLFW/glfw3** directory
+            - Get the **glfw3.h** file from **include/GLFW** directory
             - Get the **libglfw3.a** file from **lib-mingw-w64** directory
         - Paste the **glfw3.h** and **libglfw3.a** in the project **src/dependencies/GLFW** directory
     - Linux
@@ -59,7 +67,7 @@
             ```
         > **NOTE**
         >                    
-        > You need to modify the header #include "dependencies/GLFW/glfw3.h" to #include \<GLFW/glfw3.h> in the **src/maze.cpp** file.
+        > If you're using Linux, is needed to modify the header #include "dependencies/GLFW/glfw3.h" to #include \<GLFW/glfw3.h> in the **src/maze.cpp** file.
 - GLAD    
     - Find out your OpenGL version:
         - Windows
@@ -92,10 +100,10 @@
 
 - GLM
     - The library is already available at the **src/dependencies/GLM** directory
-    - However, if you want, can be found at **https://glm.g-truc.net/0.9.8/index.html** in the downloads section
+    - However, if you want, can be found at **https://glm.g-truc.net/0.9.8/index.html** in the downloads section. Install and then unzip and paste the **content** of the **glm** folder inside **src/dependencies/GLM**
 
 - STB
-    - Download the stb.h from here **https://github.com/nothings/stb/blob/master/stb_image.h**
+    - Download Copythe stb.h from here **https://github.com/nothings/stb/blob/master/stb_image.h**
     - After that, create a stb.cpp file with this code:
         ```C++
         #define STB_IMAGE_IMPLEMENTATION
@@ -123,9 +131,17 @@
             ```
 
     - Linux
+        - Compile
         ```bash
            
         ```
+        - Run
+        ```bash
+        ```
+
+> **NOTE**
+>
+> If you're using windows 64bits with opengl version 3.3 , all dependencies are already ready to use.
 
     
 
