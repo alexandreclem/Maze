@@ -33,11 +33,11 @@
 
 > **NOTE**
 >
-> You can play around with the scenario editing the input.txt file inside the **src** directory. Be careful when assigning the elevators because If you're in the first floor and creates a go down elevator you'll get an error, likewise if you create a go up elevator in the last floor.
+> You can play around with the scenario by editing the input.txt file inside the **src** directory. Be careful when assigning the elevators because If you're on the first floor and create a go-down elevator you'll get an error, likewise if you create a go-up elevator on the last floor.
 
 ### How to Run?
 
-#### Pre-Requesites
+#### Pre-Requisites
 - GCC Compiler
 - Libraries: OpenGL | GLFW | GLAD | GLM | STB
 
@@ -99,7 +99,7 @@ $ git clone https://github.com/alexandreclem/Maze.git
             ```
 
 - GLM
-    - The library is already available at the **src/dependencies/GLM** directory
+    - The library is already available in the **src/dependencies/GLM** directory
     - However, if you want, can be found at **https://glm.g-truc.net/0.9.8/index.html** in the downloads section. Install and then unzip and paste the **content** of the **glm** folder inside **src/dependencies/GLM**
 
 - STB
@@ -141,7 +141,7 @@ $ git clone https://github.com/alexandreclem/Maze.git
 
 > **NOTE**
 >
-> If you're using windows 64bits with opengl version 3.3 , all dependencies are already ready to use.
+> If you're using windows 64bits with opengl version 3.3, all dependencies are already ready to use.
 
     
 
