@@ -139,11 +139,11 @@ $ git clone https://github.com/alexandreclem/Maze.git
             ```bash
             ```
 
-> **NOTE**
->
-> If you're using windows 64bits with opengl version 3.3, all dependencies are already ready to use.
+    > **NOTE**
+    >
+    > If you're using windows 64bits with opengl version 3.3, all dependencies are already ready to use.
 
-    
+        
 
     
     
