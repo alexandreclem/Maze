@@ -103,7 +103,7 @@ $ git clone https://github.com/alexandreclem/Maze.git
     - However, if you want, can be found at **https://glm.g-truc.net/0.9.8/index.html** in the downloads section. Install and then unzip and paste the **content** of the **glm** folder inside **src/dependencies/GLM**
 
 - STB
-    - Download Copythe stb.h from here **https://github.com/nothings/stb/blob/master/stb_image.h**
+    - Download/Copy the stb_image.h from here **https://github.com/nothings/stb/blob/master/stb_image.h**
     - After that, create a stb.cpp file with this code:
         ```C++
         #define STB_IMAGE_IMPLEMENTATION
