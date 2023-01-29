@@ -20,6 +20,14 @@
     - 3 Elevator to go down
     - 4: Collectable
 
+#### Keyboard Commands
+- W: Move Forward
+- A: Move Backward
+- D: Move to the Right
+- A: Move to the Left
+- ESC: Ends the program
+- R: Restart the Game
+
 #### Example of a Three Floor Maze
 ##### Architecture
 <p align="center" width="100%">
