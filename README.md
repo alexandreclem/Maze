@@ -132,12 +132,12 @@ $ git clone https://github.com/alexandreclem/Maze.git
 
     - Linux
         - Compile
-        ```bash
-           
-        ```
+            ```bash
+            
+            ```
         - Run
-        ```bash
-        ```
+            ```bash
+            ```
 
 > **NOTE**
 >
