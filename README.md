@@ -131,20 +131,20 @@ $ git clone https://github.com/alexandreclem/Maze.git
    - Windows
         - Compile
             ```bash
-            $ g++ maze.cpp -Idependencies/GLFW -Idependencies/GLAD -Idependencies/STB -Ldependencies/GLFW -Ldependencies/GLAD -Ldependencies\STB .\dependencies\GLAD\libglad.a .\dependencies\GLFW\libglfw3.a .\dependencies\STB\libstb.a -lopengl32 -lglu32 -lgdi32 -o maze            
+            $ g++ maze.cpp -Idependencies\GLFW -Idependencies\GLAD -Idependencies\STB -Ldependencies\GLFW -Ldependencies\GLAD -Ldependencies\STB .\dependencies\GLAD\libglad.a .\dependencies\GLFW\libglfw3.a .\dependencies\STB\libstb.a -lopengl32 -lglu32 -lgdi32 -o maze            
             ```
         - Run
             ```bash
             $ maze.exe
             ```
-
     - Linux
         - Compile
             ```bash
-            
+            $ g++ maze.cpp -Idependencies/GLAD -Idependencies/STB -Ldependencies/GLAD -Ldependencies/STB ./dependencies/GLAD/libglad.a ./dependencies/STB/libstb.a -lglfw -lGL -lGLU -lX11 -lpthread -lXrandr -lXi -ldl -o maze            
             ```
         - Run
             ```bash
+            $ ./maze
             ```
 
     > **NOTE**
